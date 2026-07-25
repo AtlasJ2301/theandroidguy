@@ -4,6 +4,7 @@ body {
 }
 
 a {
+    max-width: fit-content;
     text-decoration: none;
 }
 
@@ -13,13 +14,103 @@ h1 {
     color: rgba(61, 220, 133, 0.496);
 }
 
+.hyperlink {
+    text-decoration: none;
+    color: rgb(40, 255, 137);
+    transition-duration: 0.2s;
+}
+
+.hyperlink:hover {
+    letter-spacing: 2px;
+    color: rgb(149, 255, 197);
+    cursor: pointer;
+}
+
 .text {
     text-align: center;
+    color: rgb(30, 110, 66);
+}
+
+.buynow {
+    margin-right: 4px;
+    max-width: fit-content;
+    padding: 5px 20px;
+    font-family: "Google Sans";
+    background-color: rgba(61, 220, 133, 0.496);
+    border-radius: 48px;
+    transition-duration: .4s;
+}
+
+.itemtext {
+    text-align: center;
+    color: rgb(54, 175, 108);
+}
+
+.buynow:hover {
+    animation: buynow .3s ease forwards;
+}
+
+.buynow:not(:hover) {
+    animation: buynowrev .3s forwards;
+}
+
+@keyframes buynow {
+    30% {padding: 5px 25px; border-radius: 40px;}
+    90% {padding: 5px 28px; border-radius: 20px;}
+    100% {padding: 5px 26px; border-radius: 28px; background-color: rgb(44, 159, 96);}
+}
+
+@keyframes buynowrev {
+    from {border-radius: 28px; padding: 5px 28px;}
+    to {border-radius: 48px; padding: 5px 20px;}
+}
+
+.img {
+    margin: 5px;
+    border-radius: 48px;
+}
+
+.allimg {
+    margin: 5px;
+    border-radius: 48px;
+}
+
+.allimg:hover  {
+    animation: imghov .3s ease forwards;
+}
+
+.allimg:not(:hover) {
+    animation: mghov .3s ease forwards;
+}
+
+@keyframes imghov {
+    30% {border-radius: 40px; scale: 103%;}
+    60% {scale: 104%;}
+    85% {border-radius: 20px; scale: 108%}
+    100% {border-radius: 28px; scale: 106%}
+}
+
+@keyframes mghov {
+    from {border-radius: 28px; scale: 106%}
+    to {border-radius: 48px; scale: 100%}
+}
+
+.shop {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shopitem {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    border-radius: 48px;
+    background-color: rgb(30, 110, 66);
+    padding: 20px;
 }
 
 .header {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .header-img {
@@ -86,7 +177,7 @@ h1 {
 
 @keyframes expand {
     30% {border-radius: 40px; padding: 20px 105px;}
-    85% {border-radius: 20px; padding: 20px 115px;}
+    85% {border-radius: 20px;}
     100% {border-radius: 28px; padding: 20px 115px;}
 }
 
